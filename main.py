@@ -52,15 +52,22 @@ while True:
     elif choice == '4':
         # https://www.w3schools.com/python/python_lists_comprehension.asp
         # https://www.w3schools.com/python/python_lists_access.asp - Range of Indexes
+        target_price = int(input("ievadiet skaitli"))
         newlist = []
-        for x in apartments:
-            if int(input("ievadiet skaitli")) in x:
-                newlist.append(x)
-            print(newlist)
+        for apartment in apartments:
+            if int(apartment[8]) <= target_price:
+                newlist.append(apartment)
+        print(newlist[:20])
         pass
     elif choice == '5':
         # https://www.w3schools.com/python/python_lists_comprehension.asp
         # https://www.w3schools.com/python/python_lists_access.asp - Range of Indexes
+        target_price = int(input("ievadiet skaitli"))
+        newlist = []
+        for apartment in apartments:
+            if int(apartment[8]) >= target_price:
+                newlist.append(apartment)
+        print(newlist[:20])
         pass
 
     elif choice == '6':
